@@ -1,0 +1,11 @@
+﻿{
+  "profiles": {
+    "Game": {
+      "commandName": "Executable",
+      "workingDirectory": "/home/acidzz/GameProjects/AcidzzAvatar",
+      "executablePath": "/home/acidzz/.local/share/SeedLauncher/Versions/1.12/Binaries/Editor/Linux/$(FlaxConfiguration)/FlaxEditor",
+      "commandLineArgs": "-project \"/home/acidzz/GameProjects/AcidzzAvatar\"",
+      "nativeDebugging": false
+    }
+  }
+}

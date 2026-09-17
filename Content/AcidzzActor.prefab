@@ -1,0 +1,193 @@
+{
+	"ID": "089f80033c22292d8c104318d2328ddc",
+	"TypeName": "FlaxEngine.Prefab",
+	"EngineBuild": 6912,
+	"Data": [
+	{
+		"ID": "089f80033c21faba8c10430ad2328d4e",
+		"TypeName": "FlaxEngine.AnimatedModel",
+		"Name": "acidzz",
+		"SkinnedModel": "089f80000fc550d840fba9dde3629d3a",
+		"AnimationGraph": "089f7fff0a6102031cf78f307b38c540",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				},
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				},
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				},
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				},
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				},
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "089f80081441d3fbfb736fbf2c150222",
+		"TypeName": "Game.Avatar",
+		"ParentID": "089f80033c21faba8c10430ad2328d4e",
+		"V": {
+	"Sensitivity": 1.8
+}
+	},
+	{
+		"ID": "089f80030f7df5cf893fb367b60d05ee",
+		"TypeName": "FlaxEngine.BoneSocket",
+		"ParentID": "089f80033c21faba8c10430ad2328d4e",
+		"Name": "BoneSocket",
+		"Transform": {
+			"Translation": {
+				"X": 0.0,
+				"Y": 0.879486083984375,
+				"Z": -0.000032188636396313086
+			},
+			"Orientation": {
+				"X": -0.03734897822141647,
+				"Y": -0.0003996119776275009,
+				"Z": -0.0024332930333912373,
+				"W": 0.9992992281913757
+			}
+		},
+		"Node": "Body"
+	},
+	{
+		"ID": "089f800341eb28ec9035b04afba8f392",
+		"TypeName": "FlaxEngine.EmptyActor",
+		"ParentID": "089f80030f7df5cf893fb367b60d05ee",
+		"Name": "mouths",
+		"Transform": {
+			"Translation": {
+				"X": 0.00425087520852685,
+				"Y": -0.8770243525505066,
+				"Z": -0.06561940163373947
+			},
+			"Orientation": {
+				"X": 0.03734897822141647,
+				"Y": 0.0003996119776275009,
+				"Z": 0.0024332930333912373,
+				"W": 0.9992992281913757
+			}
+		}
+	},
+	{
+		"ID": "089f800341ed372c9035b04afba8f394",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "089f800341eb28ec9035b04afba8f392",
+		"Name": "mouths",
+		"Model": "089f80033b31b88b8a211c14bedaf760",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				},
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "089f800341e95b1e9035b049fba8f38a",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "089f800341eb28ec9035b04afba8f392",
+		"Name": "mouths Mouth2",
+		"Model": "089f80033b37835a8a2199acbedfdf60",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				},
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "089f800341ec96c59035b04afba8f392",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "089f800341eb28ec9035b04afba8f392",
+		"Name": "mouths Mouth3",
+		"Model": "089f80033b3937118a21d8d3bee256e8",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				},
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "089f800341ea52ad9035b04afba8f390",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "089f800341eb28ec9035b04afba8f392",
+		"Name": "mouths Mouth4",
+		"Model": "089f80033b3b756d8a221bcabee4f48c",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				},
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	}
+]
+}

@@ -1,0 +1,21 @@
+{
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off",
+		"gulp.autoDetect": "off",
+		"jake.autoDetect": "off",
+		"grunt.autoDetect": "off",
+		"omnisharp.defaultLaunchSolution": "AcidzzAvatar.sln",
+		"omnisharp.useModernNet": true
+	},
+	"folders": [
+		{
+			"name": "AcidzzAvatar",
+			"path": "."
+		},
+		{
+			"name": "Flax",
+			"path": "/home/acidzz/.local/share/SeedLauncher/Versions/1.12"
+		}
+	]
+}

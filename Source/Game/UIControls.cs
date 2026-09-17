@@ -1,0 +1,116 @@
+﻿using System;
+using System.Collections.Generic;
+using FlaxEngine;
+using FlaxEngine.GUI;
+using System.Linq;
+namespace Game;
+
+/// <summary>
+/// UIControls Script.
+/// </summary>
+public class UIControls : Script
+{
+    public UIControl DanceButton;
+    public UIControl DropdownCostumes;
+    public UIControl SpinButton;
+    public UIControl SnoopButton;
+    public UIControl BreakDanceButton;
+    public UIControl AngryButton;
+    private Button _danceButton;
+    private Button _breakDanceButton;
+    private Button _angryButton;
+    private Button _spinButton;
+    private Button _snoopButton;
+    private Dropdown _dropdownCostumes;
+    public AnimatedModel AvatarModel;
+    private AnimState _animState = AnimState.Idle;
+
+    /// <inheritdoc/>
+    public override void OnStart()
+    {
+        Screen.CursorLock = CursorLockMode.None;
+        _danceButton = DanceButton.Control as Button;
+        _breakDanceButton = BreakDanceButton.Control as Button;
+        _angryButton = AngryButton.Control as Button;
+        _spinButton = SpinButton.Control as Button;
+        _snoopButton = SnoopButton.Control as Button;
+        _dropdownCostumes = DropdownCostumes.Control as Dropdown;
+        //Add costumes to dropdown
+        Actor costumesActor = AvatarModel.GetChild(1);
+        List<Actor> costumes = costumesActor.GetChildren<Actor>().ToList();
+        List<String> costumesNames = new List<String>();
+        foreach (Actor costume in costumes)
+        {
+            costumesNames.Add(costume.Name);
+        }
+        ;
+        _dropdownCostumes.AddItems(costumesNames);
+
+        _danceButton.Clicked += () =>
+        {
+
+            if (_animState == AnimState.Idle)
+                _animState = AnimState.Emoting;
+            else
+                _animState = AnimState.Idle;
+            AvatarModel.SetParameterValue("Pose", 0);
+            AvatarModel.SetParameterValue("animState", _animState);
+        };
+        _snoopButton.Clicked += () =>
+        {
+
+            if (_animState == AnimState.Idle)
+                _animState = AnimState.Emoting;
+            else
+                _animState = AnimState.Idle;
+            AvatarModel.SetParameterValue("Pose", 1);
+            AvatarModel.SetParameterValue("animState", _animState);
+        };
+        _breakDanceButton.Clicked += () =>
+        {
+            _animState = AnimState.SingleEmoting;
+            AvatarModel.SetParameterValue("Pose", 0);
+            AvatarModel.SetParameterValue("animState", _animState);
+        };
+
+
+        _angryButton.Clicked += () =>
+        {
+            _animState = AnimState.SingleEmoting;
+            AvatarModel.SetParameterValue("Pose", 1);
+            AvatarModel.SetParameterValue("animState", _animState);
+        };
+
+        _spinButton.Clicked += () =>
+        {
+            _animState = AnimState.SingleEmoting;
+            AvatarModel.SetParameterValue("Pose", 2);
+            AvatarModel.SetParameterValue("animState", _animState);
+        };
+        _dropdownCostumes.SelectedItemChanged += () =>
+        {
+            foreach (Actor costume in costumes)
+                costume.IsActive = false;
+            costumes[_dropdownCostumes.SelectedIndex].IsActive = true;
+        };
+        // Here you can add code that needs to be called when script is created, just before the first game update
+    }
+
+    /// <inheritdoc/>
+    public override void OnEnable()
+    {
+        // Here you can add code that needs to be called when script is enabled (eg. register for events)
+    }
+
+    /// <inheritdoc/>
+    public override void OnDisable()
+    {
+        // Here you can add code that needs to be called when script is disabled (eg. unregister from events)
+    }
+
+    /// <inheritdoc/>
+    public override void OnUpdate()
+    {
+        // Here you can add code that needs to be called every frame
+    }
+}
