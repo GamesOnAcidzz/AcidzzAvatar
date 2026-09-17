@@ -1,0 +1,22 @@
+# Flax generated files
+Binaries/
+Cache/
+Intermediate/
+Saved/
+Output/
+# Visual Studio / Rider / VS Code
+.vs/
+.idea/
+.vscode/
+
+# Build output
+Build/
+Deploy/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# User-specific files
+*.user
+*.suo
