@@ -20,3 +20,5 @@ Thumbs.db
 # User-specific files
 *.user
 *.suo
+Output/
+Output/
