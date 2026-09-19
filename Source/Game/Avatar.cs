@@ -20,7 +20,7 @@ public class Avatar : Script
     public float Level { get; private set; }
     public float Decibels { get; private set; }
     [EditorDisplay("Settings")]
-    public float Sensitivity = 1.2f;
+    public float Sensitivity = 1.6f;
     private float _levelProcessed = 0.0f;
     private float _timer;
     private long _callbackCount;
