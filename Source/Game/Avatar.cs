@@ -123,6 +123,8 @@ public class Avatar : Script
         }
         catch (PortAudioException ex)
         {
+            Debug.LogError($"PortAudio error code: {ex.ErrorCode}");
+            Debug.LogError($"PortAudio error: {PortAudio.GetErrorText(ex.ErrorCode)}");
         }
         _stream.Start();
 
@@ -144,7 +146,12 @@ public class Avatar : Script
 
     public override void OnDestroy()
     {
-
+        if (_stream != null)
+        {
+            _stream.Stop();
+            _stream.Dispose();
+            _stream = null;
+        }
 
     }
 
