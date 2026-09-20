@@ -20,15 +20,18 @@ public class UIControls : Script
     public UIControl BreakDanceButton;
     public UIControl AngryButton;
     public UIControl SensitivitySlider;
+    public UIControl SaveButton;
     private Button _danceButton;
     private Button _breakDanceButton;
     private Button _angryButton;
     private Button _spinButton;
     private Button _snoopButton;
+    private Button _saveButton;
     private Dropdown _dropdownCostumes;
     private Slider _sensitivitySlider;
     public AnimatedModel AvatarModel;
     private AnimState _animState = AnimState.Idle;
+    private AvatarSettings _avatarSettings;
     public Avatar AvatarScript;
 
     /// <inheritdoc/>
@@ -40,6 +43,7 @@ public class UIControls : Script
         _angryButton = AngryButton.Control as Button;
         _spinButton = SpinButton.Control as Button;
         _snoopButton = SnoopButton.Control as Button;
+        _saveButton = SaveButton.Control as Button;
         _dropdownCostumes = DropdownCostumes.Control as Dropdown;
         _sensitivitySlider = SensitivitySlider.Control as Slider;
         //Add costumes to dropdown
@@ -94,6 +98,10 @@ public class UIControls : Script
             AvatarModel.SetParameterValue("Pose", 2);
             AvatarModel.SetParameterValue("animState", _animState);
         };
+        _saveButton.Clicked += () =>
+        {
+            SaveSettings();
+        };
         _dropdownCostumes.SelectedItemChanged += () =>
         {
             foreach (Actor costume in costumes)
@@ -104,6 +112,7 @@ public class UIControls : Script
         {
             AvatarScript.Sensitivity = _sensitivitySlider.Value / 100;
         };
+        LoadSettings();
         // Here you can add code that needs to be called when script is created, just before the first game update
     }
 
@@ -123,5 +132,30 @@ public class UIControls : Script
     public override void OnUpdate()
     {
         // Here you can add code that needs to be called every frame
+    }
+    private void SaveSettings()
+    {
+        _avatarSettings.Sensitivity = _sensitivitySlider.Value;
+        // _avatarSettings.Costume = _dropdownCostumes.SelectedIndex;
+        String path = Path.Combine(Globals.ProductLocalFolder, "avatar_settings.json");
+        String json = JsonSerializer.Serialize(_avatarSettings);
+        File.WriteAllText(path, json);
+        Debug.Log("Avatar Settings saved");
+    }
+    private void LoadSettings()
+    {
+        String path = Path.Combine(Globals.ProductLocalFolder, "avatar_settings.json");
+        Directory.CreateDirectory(Globals.ProductLocalFolder);
+        _avatarSettings = new AvatarSettings();
+        if (!File.Exists(path))
+        {
+            String JsonSave = JsonSerializer.Serialize(_avatarSettings);
+            File.WriteAllText(path, JsonSave);
+            return;
+        }
+        String json = File.ReadAllText(path);
+        JsonSerializer.Deserialize(_avatarSettings, json);
+        _sensitivitySlider.Value = _avatarSettings.Sensitivity;
+        //   _dropdownCostumes.SelectedIndex = _avatarSettings.Costume;
     }
 }

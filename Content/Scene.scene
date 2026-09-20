@@ -611,7 +611,7 @@
 }
 		},
 		{
-			"ID": "c0ffd0f540fa8778e5f68d8fab3027d1",
+			"ID": "e754f54845f8dc2752a1e6bdc620d748",
 			"TypeName": "Game.UIControls",
 			"ParentID": "089f7fff07e8d65427256306e1328d42",
 			"V": {
@@ -622,6 +622,7 @@
 	"BreakDanceButton": "6263f6e74acac37541c586a51488cbf5",
 	"AngryButton": "85b8899b49e7f50c5b300a89ad9699c8",
 	"SensitivitySlider": "089f7fff15dfcd2c29a4bb41f9fca1c0",
+	"SaveButton": "089f800016cbc5732f18685a30818038",
 	"AvatarModel": "089f80033a198c7e833008c2796ff844",
 	"AvatarScript": "089f7fff030b08b4267a3489da82ada2"
 }
@@ -1923,7 +1924,7 @@
 			"ID": "089f800016cbc5732f18685a30818038",
 			"TypeName": "FlaxEngine.UIControl",
 			"ParentID": "089f7fff157295ba27b7b6f5e6ba6b90",
-			"Name": "Button",
+			"Name": "SaveButton",
 			"Transform": {
 				"Translation": {
 					"X": 226.0,

@@ -170,6 +170,7 @@
     <Compile Include="\home\acidzz\GameProjects\AcidzzAvatar\Source\Game.Gen.cs" />
     <Compile Include="\home\acidzz\GameProjects\AcidzzAvatar\Source\Game\AnimState.cs" />
     <Compile Include="\home\acidzz\GameProjects\AcidzzAvatar\Source\Game\Avatar.cs" />
+    <Compile Include="\home\acidzz\GameProjects\AcidzzAvatar\Source\Game\AvatarSettings.cs" />
     <Compile Include="\home\acidzz\GameProjects\AcidzzAvatar\Source\Game\ExitOnEsc.cs" />
     <Compile Include="\home\acidzz\GameProjects\AcidzzAvatar\Source\Game\FreeCamera.cs" />
     <Compile Include="\home\acidzz\GameProjects\AcidzzAvatar\Source\Game\UIControls.cs" />
