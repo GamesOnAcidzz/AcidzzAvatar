@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using FlaxEngine;
 using FlaxEngine.GUI;
 using System.Linq;
+using System.IO;
+using FlaxEngine.Json;
+
 namespace Game;
 
 /// <summary>
@@ -16,14 +19,17 @@ public class UIControls : Script
     public UIControl SnoopButton;
     public UIControl BreakDanceButton;
     public UIControl AngryButton;
+    public UIControl SensitivitySlider;
     private Button _danceButton;
     private Button _breakDanceButton;
     private Button _angryButton;
     private Button _spinButton;
     private Button _snoopButton;
     private Dropdown _dropdownCostumes;
+    private Slider _sensitivitySlider;
     public AnimatedModel AvatarModel;
     private AnimState _animState = AnimState.Idle;
+    public Avatar AvatarScript;
 
     /// <inheritdoc/>
     public override void OnStart()
@@ -35,6 +41,7 @@ public class UIControls : Script
         _spinButton = SpinButton.Control as Button;
         _snoopButton = SnoopButton.Control as Button;
         _dropdownCostumes = DropdownCostumes.Control as Dropdown;
+        _sensitivitySlider = SensitivitySlider.Control as Slider;
         //Add costumes to dropdown
         Actor costumesActor = AvatarModel.GetChild(1);
         List<Actor> costumes = costumesActor.GetChildren<Actor>().ToList();
@@ -92,6 +99,10 @@ public class UIControls : Script
             foreach (Actor costume in costumes)
                 costume.IsActive = false;
             costumes[_dropdownCostumes.SelectedIndex].IsActive = true;
+        };
+        _sensitivitySlider.ValueChanged += () =>
+        {
+            AvatarScript.Sensitivity = _sensitivitySlider.Value / 100;
         };
         // Here you can add code that needs to be called when script is created, just before the first game update
     }
