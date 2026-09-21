@@ -594,6 +594,75 @@
 			}
 		},
 		{
+			"ID": "089f7fff141bf66315bf4aef33062294",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "089f80090a87e131258b4a63d105bcac",
+			"Name": "Disrespect"
+		},
+		{
+			"ID": "089f7fff15125a9d1783662844af3d4e",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "089f7fff141bf66315bf4aef33062294",
+			"Name": "disrespect",
+			"Model": "089f7fff083925cd11e2d81f0c698f3a",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "089f7fff1513697117836ca244af7e12",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "089f7fff141bf66315bf4aef33062294",
+			"Name": "disrespect Hair",
+			"Model": "089f7fff091406bb11e459730c789c8e",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "089f7fff15144b32178370fa44afa988",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "089f7fff141bf66315bf4aef33062294",
+			"Name": "disrespect Moustache",
+			"Model": "089f7fff0916635011e498740c7b129a",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
 			"ID": "089f7fff07e8d65427256306e1328d42",
 			"TypeName": "FlaxEngine.UICanvas",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
